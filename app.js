@@ -14,20 +14,18 @@ function changeStatus(nameTask, status){
 
 function addTask (nameTask, status) {
     if (nameTask in list) {
-        console.log("Такой статут есть")
+        console.log("Такая задача есть")
     } else {
         list[nameTask] = status
     }
 }
 
-addTask("write a post", "da")
-
-changeStatus("make a bead", "no")
+function deleteTask (nameTask) {
+    if (nameTask in list) {
+        delete list[nameTask]
+    }
+}
 
 console.log(list)
 
 
-// changeStatus("write a post", "Done")
-// addTask('have a walk')
-// deleteTask('have a walk')
-// showList()
